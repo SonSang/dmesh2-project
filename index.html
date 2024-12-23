@@ -175,7 +175,9 @@
         <div class="column is-four-fifths">
           <div class="content has-text-justified">
               <p>
-              We handle mesh connectivity in probabilistic framework. To compute the existence probability of a (d-1)-simplex (i.e. edge when d=2, face when d=3), we propose to use <strong>Minimum-Ball</strong> algorithm.
+              We handle mesh connectivity in a probabilistic framework. To compute the existence probability of a (d-1)-simplex (i.e. edge when d=2, face when d=3), we propose to use <strong>Minimum-Ball</strong> algorithm.
+              Specifically, we define a simplex whose unique Minimum-Ball does not contain any other point inside it as a existing simplex.
+              The simplexes that satisfy this constraint are free of self-intersection.
               </p>
           </div>
         </div>
@@ -183,22 +185,16 @@
       <div class="columns is-centered has-text-centered">
         <img width="70%" height="70%" source="" src="static/images/minball.png" type="images"></img>  
       </div>
-      <h2 class="subtitle has-text-centered">
-        <font size="+1">
-          <strong>We propose Minimum-Ball algorithm to compute existence probability of a (d-1)-simplex (i.e. edge when d=2, face when d=3) for acceleration. </strong> <br>
-          <br>
-
-          In our probabilistic framework, we define existence of a (d-1)-simplex based on the Minimum-Ball algorithm. <br>
-          For a (d-1)-simplex K to exist, its unique Minimum-Ball should not contain any other point in it. <br>
-          (Upper Row) Edge AB does not satisfy this condition because of point F, while edge DF satisfies the condition. <br>
-          In this case, edge AB 
-          
-          
-          In our formulation, we can consider <strong>point orientations</strong> in reconstructing our mesh. <br>
-          When we give a larger coefficient for the point orientations, the reconstructed mesh usually gave more favorable results (left). <br>
-          Interestingly, when we set the coefficient to a large value, we could also observe a compact mesh that aligns with geometric features well (right).
-        </font>
-      </h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+              <p>
+              Edge AB does not satisfy Minimum-Ball condition because of point F, while edge DF satisfies it.
+              Therefore, edge AB would be excluded from our final mesh.
+              </p>
+          </div>
+        </div>
+      </div>
   </div>
 </div>
 </section>
