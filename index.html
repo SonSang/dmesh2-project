@@ -189,7 +189,7 @@
         <div class="column is-four-fifths">
           <div class="content has-text-justified">
               <p>
-              Delaunay Triangulation of 6 points (A-F). 
+              <strong>Delaunay Triangulation of 6 points (A-F).</strong>
               For edge AB and DF, we render their Minimum-Balls in blue.
               Note that edge AB does not satisfy Minimum-Ball condition because of point F, while edge DF satisfies it.
               Therefore, edge AB would be excluded from our final mesh.
@@ -204,7 +204,10 @@
         <div class="column is-four-fifths">
           <div class="content has-text-justified">
               <p>
-              Speed comparison to DMesh [1].
+              <strong>Computational speed comparison to DMesh [1].</strong>
+              Because Minimum-Ball algorithm considers local point configuration, while algorithm of DMesh considers global, DMesh++ achieves much more efficient computational cost than DMesh.
+              To be specific, DMesh has time complexity of O(N), and DMesh++ has time complexity of O(logN), where N is the number of points.
+              Therefore, DMesh++ can handle complex shapes that require large number of vertices and faces, while DMesh cannot.
               </p>
           </div>
         </div>
