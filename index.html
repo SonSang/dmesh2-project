@@ -176,8 +176,8 @@
           <div class="content has-text-justified">
               <p>
               We handle mesh connectivity in a probabilistic framework. To compute the existence probability of a (d-1)-simplex (i.e. edge when d=2, face when d=3), we propose to use <strong>Minimum-Ball</strong> algorithm.
-              Specifically, we define a simplex whose unique Minimum-Ball does not contain any other point inside it as a existing simplex.
-              The simplexes that satisfy this constraint are free of self-intersection.
+              Specifically, we define a simplex whose unique Minimum-Ball does not contain any other point inside it as a existing simplex, and consider it in defining our final mesh.
+              Note that the final mesh that is comprised of these simplexes are free of self-intersection.
               </p>
           </div>
         </div>
@@ -189,7 +189,9 @@
         <div class="column is-four-fifths">
           <div class="content has-text-justified">
               <p>
-              Edge AB does not satisfy Minimum-Ball condition because of point F, while edge DF satisfies it.
+              Delaunay Triangulation of 6 points (A-F). 
+              For edge AB and DF, we render their Minimum-Balls in blue.
+              Note that edge AB does not satisfy Minimum-Ball condition because of point F, while edge DF satisfies it.
               Therefore, edge AB would be excluded from our final mesh.
               </p>
           </div>
