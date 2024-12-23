@@ -239,7 +239,7 @@
             <p class="subtitle has-text-centered has-text-justified">
             <br>
             <strong>2D Font Reconstruction Process.</strong>
-            <small>In this task, we reconstruct 2D mesh from a given point cloud by minimizing <strong>Chamfer Distance</strong> between them.
+            <small>In this task, we reconstruct 2D mesh from a given point cloud by minimizing Chamfer Distance between them.
             In this video, we render how the 2D mesh evolves during optimization.
             We render the global view of the mesh on the left, and the zoom-in view of it on the right.
             In the zoom-in view, we render the <span style="color: blue;">input point cloud</span> together.</small>
@@ -248,11 +248,24 @@
           </div>
         </div>
         <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
+          <div class="columns is-centered">
+          <video poster="" id="video2" autoplay controls muted loop width="100%" height="100%">
             <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
+            <source src="static/videos/font_rl_output.mp4"
             type="video/mp4">
           </video>
+          </div>
+          <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <p class="subtitle has-text-centered has-text-justified">
+            <br>
+            <strong>Reinforce-Ball algorithm process.</strong>
+            <small>In 2D reconstruction, we propose Reinforce-Ball algorithm to produce efficient mesh that adapts to local geometry.
+            Note that the unnecessary vertices and edges are removed during the process.
+            In this video, we illustrate <span style="color: blue;">real part</span> and <span style="color: gray;">imaginary part</span> together. </small>
+            </p>
+          </div>
+          </div>
         </div>
         <div class="item item-video3">
           <video poster="" id="video3" autoplay controls muted loop height="100%">\
