@@ -175,9 +175,10 @@
         <div class="column is-four-fifths">
           <div class="content has-text-justified">
               <p>
-              We handle mesh connectivity in a probabilistic framework. To compute the existence probability of a (d-1)-simplex (i.e. edge when d=2, face when d=3), we propose to use <strong>Minimum-Ball</strong> algorithm.
-              Specifically, we define a simplex whose unique Minimum-Ball does not contain any other point inside it as a existing simplex, and consider it in defining our final mesh.
-              Note that the final mesh that is comprised of these simplexes are free of self-intersection.
+              We handle mesh connectivity within a probabilistic framework. 
+              To compute the existence probability of a (d−1)-simplex (e.g., an edge when d=2 or a face when d=3), we propose using the Minimum-Ball algorithm. 
+              Specifically, we define a simplex as existing if its unique Minimum-Ball contains no other points inside it, and we consider such simplices in extracting our final mesh. 
+              Notably, the resulting mesh constructed from these simplices is free of self-intersections.
               </p>
           </div>
         </div>
@@ -189,10 +190,10 @@
         <div class="column is-four-fifths">
           <div class="content has-text-justified">
               <p>
-              <strong>Delaunay Triangulation of 6 points (A-F).</strong>
-              For edge AB and DF, we render their Minimum-Balls in blue.
-              Note that edge AB does not satisfy Minimum-Ball condition because of point F, while edge DF satisfies it.
-              Therefore, edge AB would be excluded from our final mesh.
+              <strong>Delaunay Triangulation of six points (A-F).</strong>
+              For edges AB and DF, we display their Minimum-Balls in blue. 
+              Note that edge AB does not satisfy the Minimum-Ball condition due to point F, whereas edge DF does satisfy it. 
+              Consequently, edge AB is excluded from our final mesh.
               </p>
           </div>
         </div>
@@ -205,9 +206,10 @@
           <div class="content has-text-justified">
               <p>
               <strong>Computational speed comparison to DMesh [1].</strong>
-              Because Minimum-Ball algorithm considers local point configuration, while algorithm of DMesh considers global, DMesh++ achieves much more efficient computational cost than DMesh.
-              To be specific, DMesh has time complexity of O(N), and DMesh++ has time complexity of O(logN), where N is the number of points.
-              Therefore, DMesh++ can handle complex shapes that require large number of vertices and faces, while DMesh cannot.
+              Because the Minimum-Ball algorithm considers local point configurations while the DMesh algorithm is global, DMesh++ achieves a much more efficient computational cost than DMesh. 
+              Specifically, DMesh has a time complexity of O(N), while DMesh++ has a time complexity of O(logN), where N is the number of points. 
+              As a result, DMesh++ can handle complex shapes that require a large number of vertices and faces, while DMesh cannot. <br>
+              [1] Son, Sanghyun, et al. "DMesh: A Differentiable Representation for General Meshes." arXiv preprint arXiv:2404.13445 (2024).
               </p>
           </div>
         </div>
