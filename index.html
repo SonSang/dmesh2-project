@@ -326,40 +326,56 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3 has-text-centered">3D Multi-View Reconstruction: Optimization Videos</h2>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <p class="subtitle has-text-centered has-text-justified">
+          In this task, we reconstruct 3D mesh from given multi-view depth and diffuse (color) images from 64 viewpoints by minimizing rendering loss.
+          We provide some of the input images and turntable video of the 3D mesh during optimization.
+          </p>
+        </div>
+        </div>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <img width="25%" height="100%" source="" src="static/images/3d_bouquet_depth_0.png" type="images"></img>  
           <img width="25%" height="100%" source="" src="static/images/3d_bouquet_depth_1.png" type="images"></img>  
           <img width="25%" height="100%" source="" src="static/images/3d_bouquet_color_0.png" type="images"></img>  
           <img width="25%" height="100%" source="" src="static/images/3d_bouquet_color_1.png" type="images"></img>  
+          <div class="columns is-centered has-text-centered">
           <p class="subtitle has-text-centered has-text-justified">
-            <strong>Input depth and color images (64 viewpoints).</strong>
+            <strong>Input depth and color images (from 64 viewpoints).</strong>
           </p>
+          </div>
           <video poster="" id="video1" autoplay controls muted loop height="100%">
             <!-- Your video file here -->
             <source src="static/videos/3d_bouquet.mp4"
             type="video/mp4">
           </video>
+          <div class="columns is-centered has-text-centered">
           <p class="subtitle has-text-centered has-text-justified">
             <strong>Started from grid (random) initialization.</strong>
           </p>
+          </div>
         </div>
         <div class="item item-video2">
           <img width="25%" height="100%" source="" src="static/images/3d_dna_depth_0.png" type="images"></img>  
           <img width="25%" height="100%" source="" src="static/images/3d_dna_depth_1.png" type="images"></img>  
           <img width="25%" height="100%" source="" src="static/images/3d_dna_color_0.png" type="images"></img>  
           <img width="25%" height="100%" source="" src="static/images/3d_dna_color_1.png" type="images"></img>  
+          <div class="columns is-centered has-text-centered">
           <p class="subtitle has-text-centered has-text-justified">
-            <strong>Input depth and color images (64 viewpoints).</strong>
+            <strong>Input depth and color images (from 64 viewpoints).</strong>
           </p>
+          </div>
           <video poster="" id="video2" autoplay controls muted loop height="100%">
             <!-- Your video file here -->
             <source src="static/videos/3d_dna.mp4"
             type="video/mp4">
           </video>
+          <div class="columns is-centered has-text-centered">
           <p class="subtitle has-text-centered has-text-justified">
             <strong>Started from point cloud initialization.</strong>
           </p>
+          </div>
         </div>
       </div>
     </div>
