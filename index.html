@@ -198,11 +198,22 @@
         </div>
       
         <div class="item item-2d-image-2">
+          <div class="columns is-centered has-text-centered">
+            <img width="100%" height="100%" source="" src="static/images/minball_speed.png" type="images"></img>  
+          </div>
           <div class="content has-text-justified">
           <p class="subtitle has-text-centered has-text-justified">
-            <br><br><br>
+            <strong>Computational speed comparison to DMesh [1].</strong>
+            DMesh++ can handle these complex shapes in 2D and 3D as it is based on the efficient <em>Minimum-Ball</em> algorithm.
+            Compared to DMesh, whose algorithm is inherently global, the Minimum-Ball algorithm considers local point configurations.
+            Therefore, DMesh++ achieves a much more efficient computational cost than DMesh.
+            Specifically, DMesh has a time complexity of O(N), while DMesh++ has a time complexity of O(logN), where N is the number of points.<br><br>
+            <small>[1] Son, Sanghyun, et al. "DMesh: A Differentiable Representation for General Meshes." arXiv preprint arXiv:2404.13445 (2024).</small>
           </p>
           </div>
+        </div>
+
+        <div class="item item-2d-image-2">
           <div class="columns is-centered has-text-centered">
             <img width="100%" height="100%" source="" src="static/images/minball_speed.png" type="images"></img>  
           </div>
@@ -224,62 +235,6 @@
 </section>
 <!-- End video carousel -->
 
-
-
-
-<!-- Image -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Minimum-Ball Algorithm</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <div class="content has-text-justified">
-              <p>
-              We handle mesh connectivity within a probabilistic framework. 
-              To compute the existence probability of a (d−1)-simplex (e.g., an edge when d=2 or a face when d=3), we propose using the Minimum-Ball algorithm. 
-              Specifically, we define a simplex as existing if its unique Minimum-Ball contains no other points inside it, and we consider such simplices in extracting our final mesh. 
-              Notably, the resulting mesh constructed from these simplices is free of self-intersections.
-              </p>
-          </div>
-        </div>
-      </div>
-      <div class="columns is-centered has-text-centered">
-        <img width="100%" height="100%" source="" src="static/images/minball_dt.png" type="images"></img>  
-      </div>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <div class="content has-text-justified">
-              <p>
-              <strong>Delaunay Triangulation of six points (A-F).</strong>
-              For edges AB and DF, we display their Minimum-Balls in blue. 
-              Note that edge AB does not satisfy the Minimum-Ball condition due to point F, whereas edge DF does satisfy it. 
-              Consequently, edge AB is excluded from our final mesh.
-              </p>
-          </div>
-        </div>
-      </div>
-      <div class="columns is-centered has-text-centered">
-        <img width="100%" height="100%" source="" src="static/images/minball_speed.png" type="images"></img>  
-      </div>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <div class="content has-text-justified">
-              <p>
-              <strong>Computational speed comparison to DMesh [1].</strong>
-              Because the Minimum-Ball algorithm considers local point configurations while the DMesh algorithm is global, DMesh++ achieves a much more efficient computational cost than DMesh. 
-              Specifically, DMesh has a time complexity of O(N), while DMesh++ has a time complexity of O(logN), where N is the number of points. 
-              As a result, DMesh++ can handle complex shapes that require a large number of vertices and faces, while DMesh cannot. 
-              We demonstrate such capability in 2D and 3D reconstruction tasks as shown below.<br><br>
-              <small>[1] Son, Sanghyun, et al. "DMesh: A Differentiable Representation for General Meshes." arXiv preprint arXiv:2404.13445 (2024).</small>
-              </p>
-          </div>
-        </div>
-      </div>
-  </div>
-</div>
-</section>
-<!-- End image -->
 
 <!-- Video carousel -->
 <section class="hero is-small">
