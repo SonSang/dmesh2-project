@@ -38,19 +38,23 @@
   <link rel="stylesheet" href="static/css/index.css">
 
   <style>
-    .overall-carousel .item {
-      display: flex;
-      align-items: center;   /* Vertically center */
-      justify-content: center; /* Horizontally center */
-      /* (Optional) If you need a minimum height, add it here */
-      min-height: 300px;
-    }
-
-    .overall-carousel .item img {
-      /* Ensure images do not expand beyond their container */
+    .overall-carousel {
+      /* Set a fixed height (adjust as needed) */
+      height: 400px; 
+      /* Prevent the carousel from changing size */
+      overflow: hidden;
+      /* Make sure it doesn't grow beyond its container width */
       max-width: 100%;
-      height: auto;
-      /* object-fit: contain;  // If you want them contained rather than stretched */
+      margin: 0 auto; 
+    }
+    
+    .overall-carousel .item img {
+      /* Let the image fill the available height, keeping its aspect ratio */
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
     }
   </style>
 
