@@ -37,6 +37,13 @@
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
+  <style>
+    .overall-carousel .item {
+      display: flex;
+      align-items: center;
+    }
+  </style>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
@@ -166,11 +173,11 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- Image carousel -->
+<!-- Overall carousel -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <div id="results-carousel" class="carousel results-carousel">
+      <div id="overall-carousel" class="carousel overall-carousel">
         
         <div class="item item-2d-image-1">
           <div class="columns is-centered has-text-centered">  
@@ -208,8 +215,7 @@
             DMesh++ can handle these complex shapes in 2D and 3D as it is based on the efficient <em>Minimum-Ball</em> algorithm.
             Compared to DMesh, whose algorithm is inherently global, the Minimum-Ball algorithm considers local point configurations.
             Therefore, DMesh++ achieves a much more efficient computational cost than DMesh.
-            Specifically, DMesh has a time complexity of O(N), while DMesh++ has a time complexity of O(logN), where N is the number of points.
-            
+            Specifically, DMesh has a time complexity of O(N), while DMesh++ has a time complexity of O(logN), where N is the number of points.<br><br>
             <small>[1] Son, Sanghyun, et al. "DMesh: A Differentiable Representation for General Meshes." arXiv preprint arXiv:2404.13445 (2024).</small>
           </p>
           </div>
