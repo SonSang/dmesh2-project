@@ -37,6 +37,25 @@
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
+  <style>
+    .video-container {
+      position: relative;
+      width: 100%;
+      /* Sets a 16:9 aspect ratio (9 ÷ 16 = 0.5625). 
+         Adjust if you need a different ratio. */
+      padding-bottom: 56.25%;
+    }
+    
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      /* Make the iframe fill the container */
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
@@ -133,7 +152,9 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
+      <div class="video-container">
       <iframe src="https://www.youtube.com/embed/CrPRNCb0WOU?si=uW6Psu84tbQ8A4G1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
       <h2 class="subtitle has-text-justified">
         DMesh++ is an efficient differentiable mesh approach that effectively handles complex 2D and 3D shapes. 
         This video demonstrates the optimization process of DMesh++ as it reconstructs diverse 3D shapes from multi-view color and depth images. 
