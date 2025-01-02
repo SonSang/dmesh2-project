@@ -171,6 +171,7 @@
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div id="results-carousel" class="carousel results-carousel">
+        
         <div class="item item-2d-image-1">
           <div class="columns is-centered has-text-centered">  
             <img width="100%" height="100%" source="" src="static/images/teaser_svg_only.png" type="images"></img> 
@@ -183,6 +184,7 @@
           </p>
         </div>
         </div>
+        
         <div class="item item-2d-image-2">
           <div class="columns is-centered has-text-centered">
             <img width="100%" height="100%" source="" src="static/images/teaser-3d-only.png" type="images"></img>  
@@ -195,6 +197,23 @@
           </p>
           </div>
         </div>
+      
+        <div class="item item-2d-image-2">
+          <div class="columns is-centered has-text-centered">
+            <img width="100%" height="100%" source="" src="static/images/minball_speed.png" type="images"></img>  
+          </div>
+          <div class="content has-text-justified">
+          <p class="subtitle has-text-centered has-text-justified">
+            <strong>Computational speed comparison to DMesh [1].</strong>
+            DMesh++ can handle these complex shapes in 2D and 3D as it is based on the efficient <em>Minimum-Ball</em> algorithm.
+            Compared to DMesh, whose algorithm is inherently global, the Minimum-Ball algorithm considers local point configurations.
+            Therefore, DMesh++ achieves a much more efficient computational cost than DMesh.
+            Specifically, DMesh has a time complexity of O(N), while DMesh++ has a time complexity of O(logN), where N is the number of points.
+            <small>[1] Son, Sanghyun, et al. "DMesh: A Differentiable Representation for General Meshes." arXiv preprint arXiv:2404.13445 (2024).</small>
+          </p>
+          </div>
+        </div>
+      
       </div>
     </div>
   </div>
